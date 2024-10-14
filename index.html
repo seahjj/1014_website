@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communication Website</title>
+    <style>
+/* Basic setup */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.container {
+    max-width: 600px;
+}
+
+style.css
+/* Basic setup */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.container {
+    max-width: 600px;
+}
+
+#intro-text p {
+    font-size: 24px;
+}
+
+/* Typing effect */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 40ch; /* Match this with the width in #intro-text p */ }
+}
+
+/* Fade out effect */
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+#hover-words {
+    margin-top: 20px;
+}
+/* Word styles with hover effects */
+.word {
+    display: inline-block;
+    font-size: 28px;
+    color: black;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: color 0.5s ease-in-out 0.1s, 
+                font-weight 0.5s ease-in-out 0.1s, 
+                transform 0.5s ease-in-out 0.1s, 
+                rotate 2s ease-in-out 0.1s, 
+                border-radius 5s ease-in-out;
+}
+
+/* Different transition effects for each word */
+
+/* Excessive */
+.word[data-effect="excessive"]:hover {
+    transform: scale(2);
+    transition: transform 0.5s ease-in-out 0.1s, 
+                border-radius 0.5s ease-in-out 0.1s, 
+                font-size 0.5s ease-in-out 0.1s;
+    border-radius: 50px;
+    font-size: 50px;
+}
+
+/* Bold */
+.word[data-effect="bold"]:hover {
+    color: black;
+    font-weight: bold;
+    transition: color 2s ease-in-out 0.1s, 
+                font-weight 2s ease-in-out 0.1s, 
+                background-color 2s ease-in-out 0.1s;
+    background-color: lightgray;
+}
+
+/* Cold */
+.word[data-effect="cold"]:hover {
+    color: rgb(255, 222, 9);
+    transform: translateY(-10px);
+    transition: color 0.6s ease-in-out 0.1s, 
+                transform 0.6s ease-in-out 0.1s, 
+                background-color 0.6s ease-in-out 0.1s;
+    background-color: rgb(0, 0, 0);
+}
+
+/* Harsh */
+.word[data-effect="harsh"]:hover {
+    color: white;
+    transform: rotate(40deg);
+    transition: color 2s ease-in-out 0.1s, 
+                transform 2s ease-in-out 0.1s, 
+                background-color 2s ease-in-out 0.1s;
+    background-color: #fa2ae5;
+}
+
+/* Bland */
+.word[data-effect="bland"]:hover {
+    color: gray;
+    opacity: 0.7;
+    transition: color 0.8s ease-in-out 0.1s, 
+                opacity 0.8s ease-in-out 0.1s, 
+                background-color 0.8s ease-in-out 0.1s;
+    background-color: lightgray;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="intro-text">
+            <p>웹사이트란 무엇일까?... <br><br> 웹사이트는 사용자와 창작자 간의 소통이라고 생각해요.</p>
+            <p style=""><br>지금부터 소통 방식 종류에 대해 알아보죠...</p>
+        </div>
+
+        <div id="hover-words">
+            <span class="word" data-effect="excessive" style="background-color:tomato;">확실한</span>
+            <span class="word" data-effect="bold">또렷한</span>
+            <span class="word" data-effect="cold">번뜩이는</span>
+            <span class="word" data-effect="harsh">엉뚱한</span>
+            <span class="word" data-effect="bland">미묘한</span>
+        </div>
+    </div>
+</body>
+</html>
+
